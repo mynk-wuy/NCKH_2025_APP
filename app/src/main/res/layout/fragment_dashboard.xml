@@ -1,0 +1,202 @@
+<?xml version="1.0" encoding="utf-8"?>
+<TabHost xmlns:android="http://schemas.android.com/apk/res/android"
+    android:id="@android:id/tabhost"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent">
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:orientation="vertical">
+
+        <TabWidget
+            android:id="@android:id/tabs"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:contentDescription="@string/tab_widget_description" />
+
+        <FrameLayout
+            android:id="@android:id/tabcontent"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent">
+
+            <!-- Tab 1 - Lab001 -->
+            <LinearLayout
+                android:id="@+id/tab1"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:orientation="vertical">
+
+                <!-- Checkboxes for toggling lines -->
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="50dp"
+                    android:orientation="horizontal"
+                    android:padding="8dp">
+
+                    <CheckBox
+                        android:id="@+id/checkBoxLab001CO"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:checked="true"
+                        android:text="CO"
+                        android:textColor="#FF0000" />
+
+                    <CheckBox
+                        android:id="@+id/checkBoxLab001NH3"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:checked="true"
+                        android:text="NH3"
+                        android:textColor="#0000FF" />
+
+                    <CheckBox
+                        android:id="@+id/checkBoxLab001H2"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:checked="true"
+                        android:text="H2"
+                        android:textColor="#00FF00" />
+                </LinearLayout>
+
+                <HorizontalScrollView
+                    android:id="@+id/scrollViewChartLab001"
+                    android:layout_width="match_parent"
+                    android:layout_height="0dp"
+                    android:layout_weight="1"
+                    android:fillViewport="true"
+                    android:scrollbars="horizontal"
+                    android:scrollbarAlwaysDrawHorizontalTrack="true"
+                    android:overScrollMode="always"
+                    android:contentDescription="@string/chart_scroll_description">
+
+                    <ScrollView
+                        android:layout_width="wrap_content"
+                        android:layout_height="match_parent"
+                        android:fillViewport="true"
+                        android:scrollbars="vertical"
+                        android:scrollbarAlwaysDrawVerticalTrack="true"
+                        android:contentDescription="@string/chart_scroll_description">
+
+                        <com.github.mikephil.charting.charts.LineChart
+                            android:id="@+id/chartLab001"
+                            android:layout_width="4000dp"
+                            android:layout_height="200dp"
+                            android:contentDescription="@string/lab001_chart_description" />
+                    </ScrollView>
+                </HorizontalScrollView>
+
+                <ScrollView
+                    android:layout_width="match_parent"
+                    android:layout_height="150dp"
+                    android:fillViewport="true"
+                    android:scrollbars="vertical"
+                    android:scrollbarAlwaysDrawVerticalTrack="true">
+
+                    <LinearLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:orientation="vertical"
+                        android:padding="8dp">
+
+                        <TableLayout
+                            android:id="@+id/tableLab001Stats"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:padding="8dp"
+                            android:stretchColumns="*" />
+                    </LinearLayout>
+                </ScrollView>
+            </LinearLayout>
+
+            <!-- Tab 2 - A4002 -->
+            <LinearLayout
+                android:id="@+id/tab2"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:orientation="vertical">
+
+                <!-- Checkboxes for toggling lines -->
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="50dp"
+                    android:orientation="horizontal"
+                    android:padding="8dp">
+
+                    <CheckBox
+                        android:id="@+id/checkBoxA4002CO"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:checked="true"
+                        android:text="CO"
+                        android:textColor="#FF0000" />
+
+                    <CheckBox
+                        android:id="@+id/checkBoxA4002NH3"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:checked="true"
+                        android:text="NH3"
+                        android:textColor="#0000FF" />
+
+                    <CheckBox
+                        android:id="@+id/checkBoxA4002H2"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:checked="true"
+                        android:text="H2"
+                        android:textColor="#00FF00" />
+                </LinearLayout>
+
+                <HorizontalScrollView
+                    android:id="@+id/scrollViewChartA4002"
+                    android:layout_width="match_parent"
+                    android:layout_height="0dp"
+                    android:layout_weight="1"
+                    android:fillViewport="true"
+                    android:scrollbars="horizontal"
+                    android:scrollbarAlwaysDrawHorizontalTrack="true"
+                    android:overScrollMode="always"
+                    android:contentDescription="@string/chart_scroll_description">
+
+                    <ScrollView
+                        android:layout_width="wrap_content"
+                        android:layout_height="match_parent"
+                        android:fillViewport="true"
+                        android:scrollbars="vertical"
+                        android:scrollbarAlwaysDrawVerticalTrack="true"
+                        android:contentDescription="@string/chart_scroll_description">
+
+                        <com.github.mikephil.charting.charts.LineChart
+                            android:id="@+id/chartA4002"
+                            android:layout_width="4000dp"
+                            android:layout_height="200dp"
+                            android:contentDescription="@string/a4002_chart_description" />
+                    </ScrollView>
+                </HorizontalScrollView>
+
+                <ScrollView
+                    android:layout_width="match_parent"
+                    android:layout_height="150dp"
+                    android:fillViewport="true"
+                    android:scrollbars="vertical"
+                    android:scrollbarAlwaysDrawVerticalTrack="true">
+
+                    <LinearLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:orientation="vertical"
+                        android:padding="8dp">
+
+                        <TableLayout
+                            android:id="@+id/tableA4002Stats"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:padding="8dp"
+                            android:stretchColumns="*" />
+                    </LinearLayout>
+                </ScrollView>
+            </LinearLayout>
+        </FrameLayout>
+    </LinearLayout>
+</TabHost>

@@ -1,0 +1,32 @@
+<resources>
+    <string name="app_name">MQTT</string>
+    <string name="navigation_drawer_open">Open navigation drawer</string>
+    <string name="navigation_drawer_close">Close navigation drawer</string>
+    <string name="nav_header_title">MQTT</string>
+    <string name="nav_header_subtitle">Điện - Điện tử</string>
+    <string name="nav_header_desc">Navigation header</string>
+    <string name="action_settings">Đăng xuất</string>
+
+    <string name="menu_home">Trang chủ</string>
+    <string name="menu_dashboard">Giám sát</string>
+    <string name="menu_notifications">Cảnh báo</string>
+    <string name="menu_control">Điều khiển</string>
+    <string name="menu_manager">Quản lý</string>
+
+    <string name="tab_widget_description">Thanh chuyển đổi giữa các tab</string>
+    <string name="chart_scroll_description">Khu vực có thể cuộn để xem biểu đồ</string>
+    <string name="lab001_chart_description">Biểu đồ dữ liệu trạm Lab001</string>
+    <string name="a4002_chart_description">Biểu đồ dữ liệu trạm A4002</string>
+
+    <string-array name="stations_array">
+        <item>Trạm 1</item>
+        <item>Trạm 2</item>
+    </string-array>
+    <string-array name="sensors_array">
+        <item>CO</item>
+        <item>NH3</item>
+        <item>H2</item>
+    </string-array>
+    <string name="select_station">Chọn trạm</string>
+    <string name="select_sensor">Chọn cảm biến</string>
+</resources>

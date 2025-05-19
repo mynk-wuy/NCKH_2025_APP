@@ -1,0 +1,338 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical"
+    android:padding="16dp"
+    android:background="@color/white">
+
+    <!-- Header -->
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal"
+        android:gravity="center_vertical"
+        android:paddingBottom="8dp">
+
+        <ImageView
+            android:layout_width="32dp"
+            android:layout_height="32dp"
+            android:src="@drawable/cell_tower_24px"
+            app:tint="@color/primary"/>
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="TRẠM GIÁM SÁT 1"
+            android:textSize="18sp"
+            android:textColor="@color/primary"
+            android:textStyle="bold"
+            android:layout_marginLeft="8dp"/>
+    </LinearLayout>
+
+    <!-- Current values card -->
+    <com.google.android.material.card.MaterialCardView
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginBottom="16dp"
+        app:cardElevation="4dp"
+        app:cardCornerRadius="8dp">
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="vertical"
+            android:padding="16dp">
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="GIÁ TRỊ HIỆN TẠI"
+                android:textStyle="bold"
+                android:textColor="@color/secondary_text"
+                android:textSize="14sp"/>
+
+            <!-- CO Row -->
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="horizontal"
+                android:layout_marginTop="12dp">
+
+                <ImageView
+                    android:layout_width="32dp"
+                    android:layout_height="32dp"
+                    android:src="@drawable/air_24px"
+                    app:tint="@color/co_color" />
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="CO:"
+                    android:textStyle="bold"
+                    android:textSize="16sp"
+                    android:layout_marginLeft="8dp"
+                    android:textColor="@color/primary_text"/>
+
+                <TextView
+                    android:id="@+id/tvCO"
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="1"
+                    android:text="0.00"
+                    android:textSize="16sp"
+                    android:textColor="@color/co_color"
+                    android:textStyle="bold"
+                    android:layout_marginLeft="8dp"
+                    android:gravity="end"/>
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="PPM"
+                    android:textSize="14sp"
+                    android:textColor="@color/secondary_text"
+                    android:layout_marginLeft="8dp"/>
+            </LinearLayout>
+
+            <!-- H2 Row -->
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="horizontal"
+                android:layout_marginTop="8dp">
+
+                <ImageView
+                    android:layout_width="32dp"
+                    android:layout_height="32dp"
+                    android:src="@drawable/air_24px"
+                    app:tint="@color/h2_color" />
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="H2:"
+                    android:textStyle="bold"
+                    android:textSize="16sp"
+                    android:layout_marginLeft="8dp"
+                    android:textColor="@color/primary_text"/>
+
+                <TextView
+                    android:id="@+id/tvH2"
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="1"
+                    android:text="0.00"
+                    android:textSize="16sp"
+                    android:textColor="@color/h2_color"
+                    android:textStyle="bold"
+                    android:layout_marginLeft="8dp"
+                    android:gravity="end"/>
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="PPM"
+                    android:textSize="14sp"
+                    android:textColor="@color/secondary_text"
+                    android:layout_marginLeft="8dp"/>
+            </LinearLayout>
+
+            <!-- NH3 Row -->
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="horizontal"
+                android:layout_marginTop="8dp">
+
+                <ImageView
+                    android:layout_width="32dp"
+                    android:layout_height="32dp"
+                    android:src="@drawable/air_24px"
+                    app:tint="@color/nh3_color" />
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="NH3:"
+                    android:textStyle="bold"
+                    android:textSize="16sp"
+                    android:layout_marginLeft="8dp"
+                    android:textColor="@color/primary_text"/>
+
+                <TextView
+                    android:id="@+id/tvNH3"
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="1"
+                    android:text="0.00"
+                    android:textSize="16sp"
+                    android:textColor="@color/nh3_color"
+                    android:textStyle="bold"
+                    android:layout_marginLeft="8dp"
+                    android:gravity="end"/>
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="PPM"
+                    android:textSize="14sp"
+                    android:textColor="@color/secondary_text"
+                    android:layout_marginLeft="8dp"/>
+            </LinearLayout>
+        </LinearLayout>
+    </com.google.android.material.card.MaterialCardView>
+
+    <!-- Threshold settings card -->
+    <com.google.android.material.card.MaterialCardView
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        app:cardElevation="4dp"
+        app:cardCornerRadius="8dp">
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="vertical"
+            android:padding="16dp">
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="NGƯỠNG CẢNH BÁO"
+                android:textStyle="bold"
+                android:textColor="@color/secondary_text"
+                android:textSize="14sp"/>
+
+            <!-- CO Threshold -->
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="horizontal"
+                android:layout_marginTop="12dp">
+
+                <ImageView
+                    android:layout_width="32dp"
+                    android:layout_height="32dp"
+                    android:src="@drawable/ic_notifications_black_24dp"
+                    app:tint="@color/co_color" />
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="CO:"
+                    android:textStyle="bold"
+                    android:textSize="16sp"
+                    android:layout_marginLeft="8dp"
+                    android:textColor="@color/primary_text"/>
+
+                <TextView
+                    android:id="@+id/tvCOThreshold"
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="1"
+                    android:text="800"
+                    android:textSize="16sp"
+                    android:textColor="@color/co_color"
+                    android:textStyle="bold"
+                    android:layout_marginLeft="8dp"
+                    android:gravity="end"/>
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="PPM"
+                    android:textSize="14sp"
+                    android:textColor="@color/secondary_text"
+                    android:layout_marginLeft="8dp"/>
+            </LinearLayout>
+
+            <!-- H2 Threshold -->
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="horizontal"
+                android:layout_marginTop="8dp">
+
+                <ImageView
+                    android:layout_width="32dp"
+                    android:layout_height="32dp"
+                    android:src="@drawable/ic_notifications_black_24dp"
+                    app:tint="@color/h2_color" />
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="H2:"
+                    android:textStyle="bold"
+                    android:textSize="16sp"
+                    android:layout_marginLeft="8dp"
+                    android:textColor="@color/primary_text"/>
+
+                <TextView
+                    android:id="@+id/tvH2Threshold"
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="1"
+                    android:text="800"
+                    android:textSize="16sp"
+                    android:textColor="@color/h2_color"
+                    android:textStyle="bold"
+                    android:layout_marginLeft="8dp"
+                    android:gravity="end"/>
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="PPM"
+                    android:textSize="14sp"
+                    android:textColor="@color/secondary_text"
+                    android:layout_marginLeft="8dp"/>
+            </LinearLayout>
+
+            <!-- NH3 Threshold -->
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="horizontal"
+                android:layout_marginTop="8dp">
+
+                <ImageView
+                    android:layout_width="32dp"
+                    android:layout_height="32dp"
+                    android:src="@drawable/ic_notifications_black_24dp"
+                    app:tint="@color/nh3_color" />
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="NH3:"
+                    android:textStyle="bold"
+                    android:textSize="16sp"
+                    android:layout_marginLeft="8dp"
+                    android:textColor="@color/primary_text"/>
+
+                <TextView
+                    android:id="@+id/tvNH3Threshold"
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="1"
+                    android:text="800"
+                    android:textSize="16sp"
+                    android:textColor="@color/nh3_color"
+                    android:textStyle="bold"
+                    android:layout_marginLeft="8dp"
+                    android:gravity="end"/>
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="PPM"
+                    android:textSize="14sp"
+                    android:textColor="@color/secondary_text"
+                    android:layout_marginLeft="8dp"/>
+            </LinearLayout>
+        </LinearLayout>
+    </com.google.android.material.card.MaterialCardView>
+</LinearLayout>

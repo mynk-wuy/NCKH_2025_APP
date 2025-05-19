@@ -1,0 +1,70 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:orientation="vertical"
+    android:padding="16dp">
+
+    <Spinner
+        android:id="@+id/spinnerStation"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:prompt="@string/select_station" />
+
+    <Spinner
+        android:id="@+id/spinnerSensor"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="8dp"
+        android:prompt="@string/select_sensor" />
+
+    <RadioGroup
+        android:id="@+id/radioGroupTime"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="8dp"
+        android:orientation="vertical">
+
+        <RadioButton
+            android:id="@+id/radioDay"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Ngày" />
+
+        <RadioButton
+            android:id="@+id/radioWeek"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Tuần" />
+
+        <RadioButton
+            android:id="@+id/radioMonth"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Tháng" />
+    </RadioGroup>
+
+    <EditText
+        android:id="@+id/editTextFileName"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="8dp"
+        android:hint="Nhập tên file"
+        android:inputType="text" />
+
+    <EditText
+        android:id="@+id/editTextReporterName"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="8dp"
+        android:hint="Nhập tên người lập báo cáo"
+        android:inputType="text" />
+
+    <Button
+        android:id="@+id/btnExport"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_gravity="center"
+        android:layout_marginTop="16dp"
+        android:text="Xuất dữ liệu" />
+</LinearLayout>
